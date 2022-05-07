@@ -4,7 +4,7 @@ from core import*
 from montecarlo import*
 from process import*
 
-ia_jogando = True
+ia_jogando = False
 
 PRETO = (0,0,0)
 BRANCO = (255,255,255)
