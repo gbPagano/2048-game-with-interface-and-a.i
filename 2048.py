@@ -4,6 +4,8 @@ from core import*
 from montecarlo import*
 from process import*
 
+ia_jogando = True
+
 PRETO = (0,0,0)
 BRANCO = (255,255,255)
 VERDE = (0,255,0)
@@ -421,8 +423,6 @@ class Game():
         while True:
             self.eventos()
 
-ia_jogando = False
-
 if __name__ == '__main__':
     if ia_jogando:
         real_inicio = datetime.datetime.now()
@@ -443,7 +443,10 @@ if __name__ == '__main__':
         jogo.update_tela()      
         
         if jogadas == 0:
-            os.system('cls')
+            if os.name == 'nt':
+                os.system('cls')
+            else:
+                os.system('clear')
             print(f'jogadas: {jogadas}')
             print(f'pontos: {pontos[0]}')
             print_tabuleiro(jogo.tabuleiro)
@@ -461,7 +464,10 @@ if __name__ == '__main__':
                 jogadas +=1
                 aparecer_peca(jogo.tabuleiro)
         else:
-            os.system('cls')        
+            if os.name == 'nt':
+                os.system('cls')
+            else:
+                os.system('clear')        
             print(f'jogadas: {jogadas}')
             print(f'pontos: {pontos[0]}')
             print_tabuleiro(jogo.tabuleiro)
