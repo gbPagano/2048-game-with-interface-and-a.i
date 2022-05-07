@@ -22,7 +22,7 @@ $ cd 2048-game-with-interface-and-a.i
 $ pip install -r requirements.txt
 ```
 ### Executando o jogo
-Abre o arquivo ./2048-game-with-interface-and-a.i/2048.py e verifique a variável ```ia_jogando``` na **linha 7**.
+Abra o arquivo ./2048-game-with-interface-and-a.i/2048.py e verifique a variável ```ia_jogando``` na **linha 7**.
 
 Caso queira jogar, deixe a variável com valor False:
 ```py
